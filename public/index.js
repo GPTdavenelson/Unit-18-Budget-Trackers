@@ -1,6 +1,5 @@
 let transactions = [];
 let myChart;
-const transactionsOffline = transactions;
 
 fetch('/api/transaction')
     .then((response) => {
@@ -144,7 +143,6 @@ function sendTransaction(isAdding) {
             amountEl.value = '';
         });
 }
-// function saveRecord(transaction) {}
 document.querySelector('#add-btn').onclick = function () {
     sendTransaction(true);
 };
